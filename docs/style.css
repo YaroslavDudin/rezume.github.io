@@ -102,8 +102,8 @@ a:hover {
     }
 
     .photo {
-        width: 120px;
-        height: 120px;
+        width: 200px; /* Увеличьте ширину */
+        height: 300px; /* Увеличьте высоту */
     }
 
     ul {
@@ -129,8 +129,8 @@ a:hover {
     }
 
     .photo {
-        width: 100px;
-        height: 100px;
+        width: 150px; /* Увеличьте ширину */
+        height: 200px; /* Увеличьте высоту */
     }
 
     .section {
