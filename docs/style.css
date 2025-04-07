@@ -126,8 +126,8 @@ a:hover {
     }
 
     .photo {
-        width: 200px; /* Увеличьте ширину */
-        height: 300px; /* Увеличьте высоту */
+        width: 200px; 
+        height: 300px; 
     }
 
     ul {
@@ -153,8 +153,8 @@ a:hover {
     }
 
     .photo {
-        width: 150px; /* Увеличьте ширину */
-        height: 200px; /* Увеличьте высоту */
+        width: 150px; 
+        height: 200px; 
     }
 
     .section {
@@ -168,14 +168,14 @@ a:hover {
 
 @media (max-width: 768px) {
     #translateButton {
-        padding: 8px 12px; /* Уменьшение отступов для мобильных устройств */
-        font-size: 0.9em; /* Уменьшение размера шрифта для мобильных устройств */
+        padding: 8px 12px; 
+        font-size: 0.9em; 
     }
 }
 
 @media (max-width: 480px) {
     #translateButton {
-        padding: 6px 10px; /* Еще меньше отступы для маленьких экранов */
-        font-size: 0.8em; /* Уменьшение размера шрифта для маленьких экранов */
+        padding: 6px 10px;
+        font-size: 0.8em; 
     }
 }

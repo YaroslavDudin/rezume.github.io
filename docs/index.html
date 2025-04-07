@@ -10,7 +10,7 @@
             const ruElements = document.querySelectorAll('.lang-ru');
             const enElements = document.querySelectorAll('.lang-en');
             const button = document.getElementById('translateButton');
-            const photo = document.querySelector('.photo'); // Получаем элемент с классом .photo
+            const photo = document.querySelector('.photo'); 
     
             const isRussianActive = ruElements[0].style.display !== 'none';
     
@@ -18,12 +18,12 @@
                 ruElements.forEach(el => el.style.display = 'none');
                 enElements.forEach(el => el.style.display = 'block');
                 button.textContent = 'Перевести на русский';
-                photo.classList.add('asymmetry'); // Добавляем класс асимметрии
+                photo.classList.add('asymmetry'); 
             } else {
                 enElements.forEach(el => el.style.display = 'none');
                 ruElements.forEach(el => el.style.display = 'block');
                 button.textContent = 'Translate to English';
-                photo.classList.remove('asymmetry'); // Убираем класс асимметрии
+                photo.classList.remove('asymmetry'); 
             }
         }
     
