@@ -17,7 +17,10 @@ body {
 .lang-en{
     display: none
 }
-
+.photo.asymmetry {
+   
+    background-image: url('./photo/meAs.jpg');
+}
 #translateButton {
     background-color: #555; /* Цвет фона кнопки */
     color: #fff; /* Цвет текста кнопки */
