@@ -14,6 +14,26 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.lang-en{
+    display: none
+}
+
+#translateButton {
+    background-color: #555; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    border: none; /* Убираем стандартную рамку */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    font-size: 1em; /* Размер шрифта */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+    display: block; /* Блочный элемент для центрирования */
+    margin: 20px auto; /* Центрирование кнопки */
+}
+
+#translateButton:hover {
+    background-color: #777; /* Цвет фона при наведении */
+}
 
 h1 {
     text-align: center;
@@ -47,6 +67,7 @@ li {
 .contact-info {
     margin-bottom: 20px;
     text-align: center;
+
 }
 
 .photo {
@@ -139,5 +160,19 @@ a:hover {
 
     ul {
         padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    #translateButton {
+        padding: 8px 12px; /* Уменьшение отступов для мобильных устройств */
+        font-size: 0.9em; /* Уменьшение размера шрифта для мобильных устройств */
+    }
+}
+
+@media (max-width: 480px) {
+    #translateButton {
+        padding: 6px 10px; /* Еще меньше отступы для маленьких экранов */
+        font-size: 0.8em; /* Уменьшение размера шрифта для маленьких экранов */
     }
 }

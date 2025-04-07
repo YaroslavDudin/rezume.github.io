@@ -5,107 +5,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Резюме Ярослава</title>
+    <script>
+        function translate() {
+            const ruElements = document.querySelectorAll('.lang-ru');
+            const enElements = document.querySelectorAll('.lang-en');
+            const button = document.getElementById('translateButton');
+
+            // Проверяем, какой язык сейчас активен
+            const isRussianActive = ruElements[0].style.display !== 'none';
+
+            if (isRussianActive) {
+                // Скрываем русский текст и показываем английский
+                ruElements.forEach(el => el.style.display = 'none');
+                enElements.forEach(el => el.style.display = 'block');
+                button.textContent = 'Перевести на русский';
+            } else {
+                // Скрываем английский текст и показываем русский
+                enElements.forEach(el => el.style.display = 'none');
+                ruElements.forEach(el => el.style.display = 'block');
+                button.textContent = 'Translate to English';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Привязываем обработчик события к кнопке
+            const button = document.getElementById('translateButton');
+            button.addEventListener('click', translate);
+        });
+    </script>
 </head>
 <body>
 
-<div class="container">
-    <h1>Резюме</h1>
-    <div class="contact-info">
-        <div class="photo"></div>
-        <p><strong>Имя Фамилия:</strong> Ярослав Дудин</p>
-        <p><strong>Возраст:</strong> 20</p>
-        <p><strong>Контакты:</strong> 
-            <a href="tel:89650916100">89650916100</a>, 
-            <a href="mailto:yaroslavedudin@yandex.ru">yaroslavedudin@yandex.ru</a>, 
-            <a href="https://t.me/prostoQpo" target="_blank">@prostoQpo (Telegram)</a>
-        </p>
-    </div>
+    <div class="container">
+        <h1 class="lang-ru">Резюме</h1>
+        <h1 class="lang-en">Resume</h1>
+        <button id="translateButton">Translate to English</button>
+        <div class="contact-info">
+            <div class="photo"></div>
 
-    <div class="section">
-        <h2>Цель</h2>
-        <p>Стать фронтенд разработчиком.</p>
-    </div>
+            <p class="lang-ru"><strong >Имя Фамилия:</strong> Ярослав Дудин</p>
+            <p class="lang-en"><strong>Name Surname:</strong>Yaroslav Dudin</p>
+
+            <p  class="lang-ru"><strong>Возраст:</strong> 20</p>
+            <p  class="lang-en"><strong>Age:</strong> 20</p>
+
+            <p class="lang-ru"><strong>Контакты:</strong> 
+                <a href="tel:89650916100">89650916100</a>, 
+                <a href="mailto:yaroslavedudin@yandex.ru">yaroslavedudin@yandex.ru</a>, 
+                <a href="https://t.me/prostoQpo" target="_blank">@prostoQpo (Telegram)</a>
+            </p>
+            <p  class="lang-en"><strong>Contacts:</strong> 
+                <a href="tel:89650916100">89650916100</a>, 
+                <a href="mailto:yaroslavedudin@yandex.ru">yaroslavedudin@yandex.ru</a>, 
+                <a href="https://t.me/prostoQpo" target="_blank">@prostoQpo (Telegram)</a>
+            </p>
+        </div>
+    
+        <div class="section">
+            <h2 class="lang-ru">Цель</h2>
+            <h2 class="lang-en">Objective</h2>
+            <p class="lang-ru">Стать фронтенд разработчиком.</p>
+            <p class="lang-en">To become a frontend developer.</p>
+        </div>
+    
+        <div class="section">
+            <h2 class="lang-ru">Навыки</h2>
+            <h2 class="lang-en">Skills</h2>
+            <ul>
+                <li class="lang-ru"><strong>Языки программирования:</strong> JavaScript (базовый), HTML5, CSS3</li>
+                <li class="lang-en"><strong>Programming Languages:</strong> JavaScript (basic), HTML5, CSS3</li>
+                <li class="lang-ru"><strong>Фреймворки/Библиотеки:</strong> React (уверенный базовый уровень, опыт разработки To-Do List, модальных окон, чата, уведомлений), Jest (базовое понимание)</li>
+                <li class="lang-en"><strong>Frameworks/Libraries:</strong> React (confident basic level, experience in developing To-Do List, modal windows, chat, notifications), Jest (basic understanding)</li>
+                <li class="lang-ru"><strong>Инструменты:</strong> Git, VS Code, Chrome DevTools</li>
+                <li class="lang-en"><strong>Tools:</strong> Git, VS Code, Chrome DevTools</li>
+                <li class="lang-ru"><strong>Другие навыки:</strong> Быстрая обучаемость, аналитическое мышление, решение проблем, командная работа, коммуникабельность, внимание к деталям, стремление к постоянному самосовершенствованию.</li>
+                <li class="lang-en"><strong>Other Skills:</strong> Quick learner, analytical thinking, problem-solving, teamwork, communication skills, attention to detail, striving for continuous self-improvement.</li>
+            </ul>
+        </div>
+    
+
+
+
+
+
+
 
         <div class="section">
-        <h2>Навыки</h2>
-        <ul>
-            <li><strong>Языки программирования:</strong> JavaScript (базовый), HTML5, CSS3</li>
-            <li><strong>Фреймворки/Библиотеки:</strong> React (уверенный базовый уровень, опыт разработки To-Do List, модальных окон, чата, уведомлений), Jest (базовое понимание)</li>
-            <li><strong>Инструменты:</strong> Git, VS Code, Chrome DevTools</li>
-            <li><strong>Другие навыки:</strong>  Быстрая обучаемость, аналитическое мышление, решение проблем, командная работа, коммуникабельность, внимание к деталям, стремление к постоянному самосовершенствованию.</li>
-        </ul>
-    </div>
+            <h2 class="lang-ru">Релевантный опыт работы</h2>
+            <h2 class="lang-en">Relevant Work Experience</h2>
+            <p class="lang-ru">
+                <strong>GitHub:</strong> 
+                <a href="https://github.com/YaroslavDudin">https://github.com/YaroslavDudin</a>
+            </p>
+
+            <p class="lang-en">
+                <strong>GitHub:</strong> 
+                <a href="https://github.com/YaroslavDudin">https://github.com/YaroslavDudin</a>
+            </p>
+            
+            <h3 class="lang-ru">
+                <a href="https://github.com/judetsuki/codecase.github.io" target="_blank" >Командный проект:</a> 
+                    <span class="lang-ru">Веб-платформа, интегрирующая элементы открытия кейсов из CS:GO, Tasty Drop и платформы для решения задач Code Wars/LeetCode</span>
+            </h3>
 
 
-    <div class="section">
-        <h2> Релевантный опыт работы</h2>
-        <p><strong>GitHub:</strong> <a href="https://github.com/YaroslavDudin">https://github.com/YaroslavDudin</a></p>
-        <h3><a href="https://github.com/judetsuki/codecase.github.io" target="_blank">Командный проект:</a> Веб-платформа, интегрирующая элементы открытия кейсов из CS:GO, Tasty Drop и платформы для решения задач Code Wars/LeetCode</h3>
-        <p><strong>Участники:</strong> 5 человек (Тим Лид, Главный Программист, Верстальщик, Разработчик, Разработчик)</p>
-        <p><strong>Роль:</strong> Ведущий программист (Разработчик JavaScript, Верстальщик)</p>
-        <p><strong>Обязанности:</strong></p>
-        <ul>
-            <li>Проектирование и реализация пользовательского интерфейса веб-платформы с акцентом на UX/UI.</li>
-            <li>Интеграция механики открытия кейсов с заданиями из Code Wars/LeetCode для повышения вовлеченности пользователей.</li>
-            <li>Разработка и внедрение системы автоматического тестирования для проверки решений пользователей на JavaScript.</li>
-            <li>Оптимизация производительности платформы для обеспечения высокой отзывчивости и стабильности пользовательского опыта.</li>
-        </ul>
-        <p><strong>Достижения:</strong></p>
-        <ul class="achievement">
-            <li>Создана система автоматизированного тестирования, обеспечивающая верификацию корректности решений задач на JavaScript. В рамках проекта был реализован эффективный подход к организации тестовых наборов и верификации результатов.</li>
-            <li>Успешно интегрированы элементы геймификации, что способствовало повышению вовлеченности пользователей и улучшению образовательного процесса.</li>
-            <li>Проведен рефакторинг кода, что позволило улучшить скорость загрузки страниц на 15% и повысить читаемость кода.</li>
-        </ul>
-        <h3><a href=" https://github.com/YaroslavDudin/frontend-project-46" target="_blank">Самостоятельный проект:</a> Программа - Вычислитель отличий</h3>
-        <p><strong>Роль:</strong> Разработчик</p>
-        <p><strong>Описание:</strong> Разработка JavaScript-приложения для выявления и визуализации различий между двумя текстовыми файлами.</p>
-        <p><strong>Достижения:</strong></p>
-        <ul class="achievement">
-            <li>Реализован алгоритм, позволяющий эффективно сравнивать тексты большого объема за короткое время.</li>
+            <h3 class="lang-en">
+                <a href="https://github.com/judetsuki/codecase.github.io" target="_blank">Team Project:</a> 
+                <span>Web platform integrating case opening elements from CS:GO, Tasty Drop, and a platform for solving tasks from Code Wars/LeetCode</span>
+            </h3>
+                
+               
+            
+            <p class="lang-ru"><strong>Участники:</strong> 5 человек (Тим Лид, Главный Программист, Верстальщик, Разработчик, Разработчик)</p>
+            <p class="lang-en"><strong>Participants:</strong> 5 people (Team Lead, Lead Programmer, Layout Designer, Developer, Developer)</p>
+            
+            <p class="lang-ru"><strong>Роль:</strong> Ведущий программист (Разработчик JavaScript, Верстальщик)</p>
+            <p class="lang-en"><strong>Role:</strong> Lead Programmer (JavaScript Developer, Layout Designer)</p>
+            
+            <p class="lang-ru"><strong>Обязанности:</strong></p>
+            <ul class="lang-ru">
+                <li>Проектирование и реализация пользовательского интерфейса веб-платформы с акцентом на UX/UI.</li>
+                <li>Интеграция механики открытия кейсов с заданиями из Code Wars/LeetCode для повышения вовлеченности пользователей.</li>
+                <li>Разработка и внедрение системы автоматического тестирования для проверки решений пользователей на JavaScript.</li>
+                <li>Оптимизация производительности платформы для обеспечения высокой отзывчивости и стабильности пользовательского опыта.</li>
+            </ul>
+            
+            <p class="lang-en "><strong>Responsibilities:</strong></p>
+            <ul class="lang-en">
+                <li>Design and implementation of the user interface of the web platform with a focus on UX/UI.</li>
+                <li>Integration of case opening mechanics with tasks from Code Wars/LeetCode to enhance user engagement.</li>
+                <li>Development and implementation of an automated testing system to verify user solutions in JavaScript.</li>
+                <li>Optimization of platform performance to ensure high responsiveness and stability of the user experience.</li>
+            </ul>
+            
+            <p class="lang-ru"><strong>Достижения:</strong></p>
+            <ul class="lang-ru achievement">
+                <li>Создана система автоматизированного тестирования, обеспечивающая верификацию корректности решений задач на JavaScript. В рамках проекта был реализован эффективный подход к организации тестовых наборов и верификации результатов.</li>
+                <li>Успешно интегрированы элементы геймификации, что способствовало повышению вовлеченности пользователей и улучшению образовательного процесса.</li>
+                <li>Проведен рефакторинг кода, что позволило улучшить скорость загрузки страниц на 15% и повысить читаемость кода.</li>
+            </ul>
+            
+            <p class="lang-en"><strong>Achievements:</strong></p>
+            <ul class="lang-en achievement" >
+                <li>Created an automated testing system that ensures the verification of the correctness of task solutions in JavaScript.</li>
+                <li>Successfully integrated gamification elements, which contributed to increased user engagement.</li>
+                <li>Conducted code refactoring, which improved page load speed by 15%.</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+        <div class="section">
+            <h3 class="lang-ru">
+                <a href="https://github.com/YaroslavDudin/frontend-project-46" target="_blank" >Самостоятельный проект:</a>  
+              Программа - Вычислитель Отличий
+            </h3>
+
+            <h3 class="lang-en"><a href="https://github.com/YaroslavDudin/frontend-project-46" target="_blank" >Individual Project:</a>
+                 Difference Calculator
+            </h3>
+
+           
+            <p class="lang-ru"><strong>Роль:</strong> Разработчик</p>
+            <p class="lang-en"><strong>Role:</strong> Developer</p>
+
+
+            <p class="lang-ru"><strong>Описание:</strong> Разработка JavaScript-приложения для выявления и визуализации различий между двумя текстовыми файлами.</p>
+            <p class="lang-en"><strong>Description:</strong> Developing a JavaScript application to identify and visualize differences between two text files.</p>
+
+
+            <p class="lang-ru"><strong>Достижения:</strong></p>
+            <ul class="lang-ru achievement">
+                <li>Реализован алгоритм, позволяющий эффективно сравнивать тексты большого объема за короткое время.</li>
             <li>Проект был покрыт unit-тестами с использованием Jest для обеспечения надежности и стабильности функциональности. Применена параметризованная проверка, что позволило комплексно протестировать функцию сравнения для различных форматов входных файлов и стилей вывода.</li>
-        </ul>
+            </ul>
 
-        <h3><a href=" https://github.com/YaroslavDudin/frontend-project-44" target="_blank">Самостоятельный проект:</a> Набор игр разума</h3>
-        <p><strong>Роль:</strong> Разработчик</p>
-        <p><strong>Описание:</strong> Создание набора консольных игр, направленных на улучшение логического мышления и концентрации внимания.</p>
-        <p><strong>Достижения:</strong> Разработано 5 уникальных игр с различными уровнями сложности, что способствовало развитию когнитивных навыков пользователей.</p>
+            <p class="lang-en"><strong>Achievements:</strong></p>
+            <ul class="lang-en achievement">
+                <li>Implemented an algorithm that efficiently compares large texts.</li>
+                <li>The project was covered with unit tests using Jest.</li>
+            </ul>
+        </div>
 
-        <h3>Личные проекты на React</h3>
-        <p><strong>Описание:</strong> Разработка простых веб-приложений на React, включая To-Do List, модальные окна и интерактивный чат, реализованный с использованием компонентного подхода.</p>
-    </div>
-    <div class="section">
-        <h2>Нерелевантный опыт работы</h2>
 
-        <h3>ООО "Купи-Корм", Начальник склада (2022 - 2023)</h3>
-        <p>Вступил в должность начальника склада в юном возрасте благодаря инновационным идеям, которые значительно увеличили прибыльность бизнеса.</p>
-        <p><strong>Ключевые достижения:</strong></p>
-        <ul>
-            <li>Разработал и внедрил систему оптимизации складских запасов, что позволило вмещать больше товаров на складе</li>
-            <li>Внедрил систему учета и контроля, что свело к минимуму потери и хищения на складе.</li>
-        </ul>
+        <div class="section">
+           <h3 class="lang-ru">
+    <a href="https://github.com/YaroslavDudin/frontend-project-44" target="_blank" >Самостоятельный проект:</a>
+    Набор Игр Разума
+</h3>
 
-        <h3>Билайн, Менеджер по продажам (2020 - 2021)</h3>
-        <p>Активно привлекал новых клиентов и поддерживал высокий уровень продаж, используя навыки эффективной коммуникации и убеждения.</p>
-        <p><strong>Ключевые достижения:</strong></p>
-        <ul>
-            <li>Увеличил объем продаж на 20% за квартал, став одним из лучших менеджеров в команде.</li>
-            <li>Успешно взаимодействовал с руководством и сотрудниками, улучшая коммуникацию и повышая уровень качества работы.</li>
-            <li>Всегда выполнял план поставленный руководством.</li>
-        </ul>
-    </div>
-    <div class="section">
-        <h2>Образование</h2>
-        <p><strong>Хекслет колледж</strong> - информационные системы и программирование (среднее специальное неоконченное) - (Планируемая дата окончания: 2026)</p>
-    </div>
+<h3 class="lang-en">
+    <a href="https://github.com/YaroslavDudin/frontend-project-44" target="_blank" >Individual Project:</a>
+    Mind Games Set
+</h3>
 
-    <div class="section">
-        <h2>Дополнительная информация</h2>
-        <p><strong>Немного обо мне:</strong>  Люблю настольные игры любого формата, легко нахожу общий язык с людьми. В свободное время разрабатываю веб-приложения, играю в баскетбол и настольные игры, слежу за новостями футбола.</p>
-        <p>Готов к работе и обучению. </p>
-        <p><strong>Примечание:</strong> Код и проекты будут предоставлены по запросу или доступны на GitHub.</p>
+            <p class="lang-ru"><strong>Роль:</strong> Разработчик</p>
+            <p class="lang-en"><strong>Role:</strong> Developer</p>
+            <p class="lang-ru"><strong>Описание:</strong> <strong class="lang-en">Description:</strong> Создание набора консольных игр, направленных на улучшение логического мышления и концентрации внимания</p>
+            <p class="lang-en"><strong>Description:</strong> Creation of a set of console games aimed at improving logical thinking and concentration.</p>
+            <p class="lang-ru"><strong>Достижения:</strong></p>
+            <ul class="lang-ru achievement">
+                <li>Разработано 5 уникальных игр с различными уровнями сложности, что способствовало развитию когнитивных навыков пользователей.</li>
+            </ul>
+            <p class="lang-en" ><strong>Achievements:</strong></p>
+            <ul class="lang-en achievement" >
+                <li>Developed 5 unique games with varying levels of difficulty.</li>
+            </ul>
+            <h3 class="lang-ru">Личные проекты на React</h3>
+            <h3 class="lang-en"> Personal projects on React</h3>
+            <p class="lang-ru"><strong>Описание:</strong>  Разработка простых веб-приложений на React, включая To-Do List, модальные окна и интерактивный чат, реализованный с использованием компонентного подхода..</p>
+            <p class="lang-en"><strong>Description:</strong> Development of simple web applications in React, including To-Do List, modal windows, and an interactive chat.</p>
+        </div>
 
-    </div>
-</div>
 
+
+        <div class="section">
+            <h2 class="lang-ru">Нерелевантный опыт работы</h2>
+            <h2 class="lang-en">Non-Relevant Work Experience</h2>
+
+
+            <h3 class="lang-ru">ООО "Купи-Корм", Начальник склада (2022 - 2023)</h3>
+            <h3 class="lang-en">LLC "Buy-Food", Warehouse Manager (2022 - 2023)</h3>
+
+
+            <p class="lang-ru">Вступил в должность начальника склада в юном возрасте благодаря инновационным идеям, которые значительно увеличили прибыльность бизнеса.</p>
+            <p class="lang-en">Joined the position of warehouse manager at a young age due to innovative ideas.</p>
+
+
+            <p class="lang-ru"><strong>Ключевые достижения:</strong></p>
+            <p class="lang-en"><strong>Key Achievements:</strong></p>
+
+
+            <ul class="lang-ru">
+                <li >Разработал и внедрил систему оптимизации складских запасов, что позволило вмещать больше товаров на складе</li>
+                <li >Внедрил систему учета и контроля, что свело к минимуму потери и хищения на складе.</li>
+            </ul>
+
+
+            <ul class="lang-en">
+                <li >Developed and implemented a warehouse inventory optimization system.</li>
+                <li >Implemented an accounting and control system.</li>
+            </ul>
+
+
+            <h3 class="lang-ru">Билайн, Менеджер по продажам (2020 - 2021)</h3>
+            <h3 class="lang-en">Beeline, Sales Manager (2020 - 2021)</h3>
+
+            <p class="lang-ru">Активно привлекал новых клиентов и поддерживал высокий уровень продаж, используя навыки эффективной коммуникации.</p>
+            <p class="lang-en">Actively attracted new clients and maintained a high level of sales.</p>
+
+
+            <p class="lang-ru"><strong>Ключевые достижения:</strong></p>
+            <p class="lang-en"><strong>Key Achievements:</strong></p>
+
+
+            <ul class="lang-ru">
+                <li>Увеличил объем продаж на 20% за квартал, став одним из лучших менеджеров в команде.</li>
+                <li>Успешно взаимодействовал с руководством и сотрудниками, улучшая коммуникацию и повышая уровень качества работы.</li>
+                <li>Всегда выполнял план поставленный руководством.</li>
+            </ul>
+
+
+            <ul class="lang-en">
+                <li>Increased sales volume by 20% in a quarter.</li>
+                <li>Successfully interacted with management and employees.</li>
+            </ul>
+
+
+        </div>
+        <div class="section">
+            <h2 class="lang-ru">Образование</h2>
+            <h2 class="lang-en">Education</h2>
+
+
+            <p class="lang-ru"><strong>Хекслет колледж</strong> - информационные системы и программирование (среднее специальное неоконченное) - (Планируемая дата окончания: 2026)</p>
+            <p class="lang-en"><strong>Hexlet College</strong> - Information Systems and Programming (incomplete secondary vocational education) - (Expected graduation date: 2026)</p>
+        </div>
+    
+        <div class="section">
+
+            <h2 class="lang-ru">Дополнительная информация</h2>
+            <h2 class="lang-en">Additional Information</h2>
+
+
+            <p class="lang-ru"><strong>Немного обо мне:</strong> Люблю настольные игры любого формата, легко нахожу общий язык с людьми. В свободное время, разрабатываю веб-приложения, играю в баскетбол и настольные игры, слежу за новостями футбола.</p>
+            <p class="lang-en"><strong>A little about me:</strong> I love board games of any format and easily find common ground with people. In my free time, I develop web applications, play basketball and board games, and follow football news.</p>
+
+
+            <p class="lang-ru">Готов к работе и обучению.</p>
+            <p class="lang-en">Ready for work and learning.</p>
+
+
+            <p class="lang-ru"><strong>Примечание:</strong> Код и проекты будут предоставлены по запросу или доступны на GitHub.</p>
+            <p class="lang-en"><strong>Note:</strong> Code and projects will be provided upon request or available on GitHub.</p>
+        </div>
+    </div> 
 </body>
-</html>
+    </html>
