@@ -79,8 +79,13 @@
             <h2 class="section-title">Образование</h2>
             <div class="education-item">
                 <div class="education-name">Хекслет Колледж</div>
-                <div>Информационные системы и программирование</div>
-                <div class="period">2023 - 2026 (ожидается)</div>
+                <div>Информационные системы и программирование </div>
+                <div class="period">2023 - 2026 </div>
+            </div>
+            <div class="education-item">
+                <div class="education-name">Хекслет Колледж</div>
+                <div>Сетевое и системное администрирование</div>
+                <div class="period">2023 - 2026 </div>
             </div>
         </div>
 
@@ -101,14 +106,17 @@
             </div>
 
             <div class="project-item">
-                <div class="company">SmartMeal (Full-stack экосистема)</div>
-                <div class="period">Январь 2026 - Настоящее время</div>
-                <div class="role">Team Lead / Android-разработчик</div>
+                <div class="company">SmartMeal — Full-stack экосистема умного планирования питания</div>
+                <div class="period">Март 2026 — Настоящее время &nbsp;·&nbsp; <a href="https://github.com/YaroslavDudin/smartmeal-android" class="link" target="_blank">GitHub</a></div>
+                <div class="role">Team Lead / Full-stack разработчик (Android + Django REST API)</div>
                 <ul class="achievements">
-                    <li>Возглавлял команду из 6 человек, организовывая процессы разработки, распределение задач и проектирование архитектуры.</li>
-                    <li>Разработал нативное Android-приложение и высокопроизводительный REST API в рамках Full-stack экосистемы для автоматизации диетического планирования и оптимизации покупок.</li>
-                    <li>Выстроил модульную архитектуру и провел глубокий рефакторинг для улучшения структуры проекта и поддерживаемости кода.</li>
-                    <li>Интегрировал CI/CD пайплайны для автоматизации тестирования и сборки проекта.</li>
+                    <li><strong>Основал проект и выстроил архитектуру:</strong> инициализировал монорепозиторий, разбил его на модули <code>client/</code> (Kotlin/Jetpack Compose) и <code>server/</code> (Django REST Framework + PostgreSQL), настроил структуру навигации и папок с нуля.</li>
+                    <li><strong>CI/CD с нуля:</strong> самостоятельно настроил GitHub Actions — пайплайны для Android (lint, сборка APK, instrumented-tests) и для бэкенда (pytest, стиль кода). Прошёл через 15+ итераций отладки конфигурации gradle-wrapper, Ubuntu runner и прав доступа до полностью рабочего пайплайна.</li>
+                    <li><strong>Аутентификация и токены:</strong> реализовал полный цикл — регистрация, логин, logout с инвалидацией JWT-токена на сервере; написал тесты для API-эндпоинтов (<code>/login</code>, <code>/logout</code>); интегрировал токен в Android-клиент с корректной обработкой при смене пользователя.</li>
+                    <li><strong>Экран статистики:</strong> разработал <code>StatisticsViewModel</code> и интеграцию с сериализатором меню для отображения нутриентов — переработал расчёт калорий с «на 100 г» на «на порцию», устранил дублирование данных.</li>
+                    <li><strong>Рецепты и детализация блюд:</strong> зафиксил расчёт веса блюда (убрал хардкод 500 г), добавил реальное время приготовления по шагам (убрал хардкод 3 мин), подключил обновлённый сериализатор к Android-клиенту; реализовал полноценный <code>RecipeListScreen</code> и <code>RecipeDetailViewModel</code> (600+ строк нового кода).</li>
+                    <li><strong>Синхронизация и кэш:</strong> написал <code>MenuSyncManager</code> для синхронизации меню по дням; добавил кэш продуктов; исправил баг утечки кэша при смене пользователя (logout).</li>
+                    <li><strong>Управление командой:</strong> руководил командой из 6 человек — ставил задачи, делал merge веток с разрешением конфликтов вручную (сохранение multi-plan логики, кастомных overrides), ревьюил и направлял участников через коммиты-задания.</li>
                 </ul>
             </div>
 
