@@ -113,14 +113,13 @@
         <div class="tl-dot"></div>
         <div class="tl-card">
           <div class="tl-head">
-            <div class="tl-company">SmartMeal — Full-stack экосистема умного планирования питания</div>
+            <div class="tl-company">ООО "МАРЛО ГРУПП" : SmartMeal — Full-stack экосистема умного планирования питания</div>
             <div class="tl-period">Март 2026 — н.в.</div>
           </div>
           <div class="tl-role">Team Lead · Full-stack разработчик (Android + Django REST API)</div>
           <ul class="tl-list">
             <li><strong>Основал проект и архитектуру:</strong> инициализировал монорепозиторий, разбил на модули <code>client/</code> (Kotlin / Jetpack Compose) и <code>server/</code> (Django REST + PostgreSQL), настроил навигацию и структуру с нуля.</li>
             <li><strong>CI/CD с нуля:</strong> самостоятельно настроил GitHub Actions — пайплайны Android (lint, сборка APK, instrumented-tests) и бэкенда (pytest, стиль кода). Прошёл через 15+ итераций отладки gradle-wrapper, Ubuntu runner и прав доступа.</li>
-            <li><strong>Контейнеризация:</strong> собрал <code>Dockerfile</code> + <code>docker-compose.yml</code> (Django + PostgreSQL + Gunicorn), написал <code>Makefile</code> для автоматизации миграций, фикстур и тестов.</li>
             <li><strong>Аутентификация JWT:</strong> полный цикл — рег\истрация, логин, logout с инвалидацией токена на сервере; тесты для <code>/login</code> и <code>/logout</code>; интеграция в Android-клиент с корректной сменой пользователя.</li>
             <li><strong>Экран статистики:</strong> <code>StatisticsViewModel</code> + интеграция с сериализатором меню; переработал расчёт с «на 100 г» на «на порцию», устранил дублирование данных.</li>
             <li><strong>Синхронизация и кэш:</strong> написал <code>MenuSyncManager</code> для синхронизации меню по дням, добавил кэш продуктов, исправил баг утечки кэша при logout.</li>
